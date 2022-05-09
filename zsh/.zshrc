@@ -14,7 +14,8 @@ source ~/.zsh/bin/antigen.zsh
 antigen use oh-my-zsh
 
 # Load the theme
-antigen theme spaceship-prompt/spaceship-prompt
+antigen bundle mafredri/zsh-async
+antigen bundle chabou/pure-now
 
 # Syntax highlighting bundle
 antigen bundle zsh-users/zsh-syntax-highlighting
