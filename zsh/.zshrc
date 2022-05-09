@@ -1,6 +1,9 @@
 # Souce aliases
 source ~/.zsh/aliases.sh
 
+# Souce functions
+source ~/.zsh/functions.sh
+
 # Use antigen (plugin manager)
 source ~/.zsh/bin/antigen.zsh
 
@@ -15,6 +18,9 @@ antigen theme spaceship-prompt/spaceship-prompt
 
 # Syntax highlighting bundle
 antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Syntax autosuggestion bundle
+antigen bundle zsh-users/zsh-autosuggestions
 
 # Tell Antigen that you're done
 antigen apply
