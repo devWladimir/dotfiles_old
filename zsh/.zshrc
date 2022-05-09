@@ -25,5 +25,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
 
 # Theme
-zinit ice pick"async.zsh" src"pure.zsh"
-zinit light sindresorhus/pure
+zinit light spaceship-prompt/spaceship-prompt
+
+# zinit ice pick"async.zsh" src"pure.zsh"
+# zinit light sindresorhus/pure
