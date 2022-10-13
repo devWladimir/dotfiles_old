@@ -67,7 +67,8 @@ function install_command_line_tools() {
             head -n 1 | awk -F"*" '{print $2}' |
             sed -e 's/^ *//' |
             tr -d '\n')
-        softwareupdate -i "$PROD" -v;
+        softwareupdate -i "$PROD" -v; 
+        rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
 
         echo_success "☀️  Xcode Command line Tools successfully installed, so go to next step..."
     else
