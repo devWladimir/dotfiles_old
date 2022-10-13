@@ -1,9 +1,6 @@
 #!/bin/bash
 set -u
 
-# Sleep after message
-sleepMessage = 2
-
 # Terminal colors
 terminalColorClear='\033[0m'
 terminalColorRed='\033[1;31m'
@@ -19,25 +16,25 @@ abort() {
 # Default message
 echoDefault() {
     echo -e "${terminalColorClear}$1${terminalColorClear}"
-    sleep $sleepMessage
+    sleep 2
 }
  
 # Green color message
 echoSuccess() {
     echo -e "${terminalColorGreen}$1${terminalColorClear}"
-    sleep $sleepMessage
+    sleep 2
 }
  
 # Yellow color message
 echoWarning() {
     echo -e "${terminalColorYellow}$1${terminalColorClear}"
-    sleep $sleepMessage
+    sleep 2
 }
  
 # Red color message
 echoError() {
     echo -e "${terminalColorRed}$1${terminalColorClear}"
-    sleep $sleepMessage
+    sleep 2
 }
 
 # Checking installed bash in OS
