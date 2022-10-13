@@ -60,8 +60,11 @@ function install_command_line_tools() {
         echo_error "🌩 You do not have the Xcode Command Line Tools."
         echo_warning "⚡️ Installing Xcode Command Line Tools..."
 
-        sudo xcode-select --install
-        sudo xcodebuild -license accept
+        in_progress=/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+        touch ${in_progress}
+        product=$(softwareupdate --list | awk "/\* Command Line.*${os}/ { sub(/^   \* /, \"\"); print }")
+        softwareupdate --verbose --install "${product}" || echo_error '🌩  Installation failed.' 1>&2 && rm ${in_progress} && abort
+        rm ${in_progress}
 
         echo_success "☀️ Xcode Command line Tools successfully installed, so go to next step..."
     else
@@ -77,7 +80,7 @@ function install_homebrew() {
         echo_error "🌩 You do not have the Homebrew."
         echo_warning "⚡️ Installing Homebrew..."
 
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"    
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
         echo_success "☀️ Homebrew successfully installed, so go to next step..."
     else
