@@ -14,5 +14,5 @@
  1. Install requirements from remote file
  
  ```
- curl -sL https://raw.githubusercontent.com/devWladimir/dotfiles/main/installer/macos.sh | bash
+ bash -c "$(curl -fsSL https://raw.githubusercontent.com/devWladimir/dotfiles/main/installer/macos.sh)"
  ```

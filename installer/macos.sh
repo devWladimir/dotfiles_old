@@ -48,7 +48,7 @@ check_bash() {
 # Confirm / Abort install
 confirm_install() {
     echo_default ""
-    echo_default "🔥 This script will install [Xcode Command Line Tools, Homebrew and Chezmoi.io]"
+    echo_default "⚡️ This script will install [Xcode Command Line Tools, Homebrew and Chezmoi.io]"
     read -n 1 -r -s -p $'    Press any key to continue or Control+C to abort...\n\n'
 }
 
@@ -74,7 +74,7 @@ function install_homebrew() {
     echo_default "⚡️ Looking for Homebrew..."
 
     if test ! $(which brew); then
-        echo_error "🧨 You do not have the Homebrew."
+        echo_error "🌩 You do not have the Homebrew."
         echo_warning "⚡️ Installing Homebrew..."
 
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"    
@@ -91,14 +91,14 @@ function install_chezmoi() {
     echo_default "⚡️ Looking for Chezmoi..."
 
     if test ! $(which chezmoi); then
-        echo_error "🧨 You do not have the Chezmoi."
+        echo_error "🌩 You do not have the Chezmoi."
         echo_warning "⚡️ Installing Chezmoi..."
 
         brew install chezmoi
 
         echo_success "☀️ Chezmoi successfully installed, so go to next step..."
     else
-        echo_success "👌 Cezmoi already installed, so skipping to next step..."
+        echo_success "️☀️ Cezmoi already installed, so skipping to next step..."
     fi
 }
 
