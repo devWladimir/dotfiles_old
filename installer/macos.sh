@@ -53,7 +53,7 @@ confirmInstall() {
 }
 
 # Install Xcode Command Line Tools
-function isntallCommadLineTools() {
+function installCommandLineTools() {
     echoDefault "⚡️ Looking for Xcode Command Line Tools..."
 
     if ! [ $(xcode-select -p) ]; then
@@ -106,7 +106,7 @@ function installChezmoi() {
 # Process installing
 checkBash
 confirmInstall
-isntallCommadLineTools
+installCommandLineTools
 installHomebrew
 installChezmoi
 
