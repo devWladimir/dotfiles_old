@@ -69,9 +69,9 @@ function install_command_line_tools() {
             tr -d '\n')
         softwareupdate -i "$PROD" -v;
 
-        echo_success "☀️ Xcode Command line Tools successfully installed, so go to next step..."
+        echo_success "☀️  Xcode Command line Tools successfully installed, so go to next step..."
     else
-        echo_success "☀️ Xcode Command Line Tools are already installed, so skipping to next step..."
+        echo_success "☀️  Xcode Command Line Tools are already installed, so skipping to next step..."
     fi
 }
 
@@ -85,9 +85,9 @@ function install_homebrew() {
 
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-        echo_success "☀️ Homebrew successfully installed, so go to next step..."
+        echo_success "☀️  Homebrew successfully installed, so go to next step..."
     else
-        echo_success "☀️ Homebrew already installed, so skipping to next step..."
+        echo_success "☀️  Homebrew already installed, so skipping to next step..."
     fi
 }
 
@@ -102,9 +102,9 @@ function install_chezmoi() {
 
         brew install chezmoi
 
-        echo_success "☀️ Chezmoi successfully installed, so go to next step..."
+        echo_success "☀️  Chezmoi successfully installed, so go to next step..."
     else
-        echo_success "️☀️ Cezmoi already installed, so skipping to next step..."
+        echo_success "️☀️  Cezmoi already installed, so skipping to next step..."
     fi
 }
 
