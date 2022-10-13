@@ -49,7 +49,7 @@ check_bash() {
 confirm_install() {
     echo_default ""
     echo_default "⚡️ This script will install [Xcode Command Line Tools, Homebrew and Chezmoi.io]"
-    read -n 1 -r -s -p $'    Press any key to continue or Control+C to abort...\n\n'
+    read -n 1 -r -s -p $'   Press any key to continue or Control+C to abort...\n\n'
 }
 
 # Install Xcode Command Line Tools
