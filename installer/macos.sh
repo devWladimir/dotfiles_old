@@ -60,7 +60,7 @@ function install_command_line_tools() {
         echo_error "🌩 You do not have the Xcode Command Line Tools."
         echo_warning "⚡️ Installing Xcode Command Line Tools..."
 
-        xcode-select --install
+        sudo xcode-select --install
         sudo xcodebuild -license accept
 
         echo_success "☀️ Xcode Command line Tools successfully installed, so go to next step..."
