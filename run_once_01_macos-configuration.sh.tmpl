@@ -2,7 +2,22 @@
 
 #!/bin/sh
 
-# Change Dock size
+# [Dock] Change Dock size
 defaults write com.apple.dock tilesize -int 38; killall Dock
+
+# [Dock] Show indicators for open applications
+defaults write com.apple.dock show-process-indicators -bool true
+
+# [Keyboard] Key Repeat
+defaults write -g KeyRepeat -int 2
+
+# [Keyboard] Initial Key Repeat
+defaults write -g InitialKeyRepeat -int 10
+
+# [Keyboard] Use F1,F2 as normal keys
+defaults write -g com.apple.keyboard.fnState -bool true
+
+# [Trackpad] Set tapping for imitate click
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 
 {{ end -}}
