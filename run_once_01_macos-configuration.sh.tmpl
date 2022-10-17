@@ -1,14 +1,8 @@
-############################
-#                          #
-#   Mac OS Configuration   #
-#                          #
-############################
-
-{{- if eq .chezmoi.os "darwin" }}
+{{ if eq .chezmoi.os "darwin" -}}
 
 #!/bin/sh
 
 # Change Dock size
 defaults write com.apple.dock tilesize -int 32; killall Dock
 
-{{- end }}
+{{ end -}}
