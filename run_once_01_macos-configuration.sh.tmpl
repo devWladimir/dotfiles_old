@@ -2,11 +2,22 @@
 
 #!/bin/sh
 
+
+# For more defaults settings visit
+# https://macos-defaults.com
+
+
 # [Dock] Change Dock size
-defaults write com.apple.dock tilesize -int 38; killall Dock
+defaults write com.apple.dock tilesize -int 38
 
 # [Dock] Show indicators for open applications
 defaults write com.apple.dock show-process-indicators -bool true
+
+# [Dock] Hide recent applications
+defaults write com.apple.dock show-recents -bool false
+
+# [Dock] Reset dock for apply settings
+killall Dock
 
 # [Keyboard] Key Repeat
 defaults write -g KeyRepeat -int 2
