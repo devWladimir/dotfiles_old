@@ -8,4 +8,4 @@ alias l="ls -lAFh"
 alias reset="command reset && source ~/.zshrc"
 
 # Alias for Chezmoi
-alias dot chezmoi
+alias dot=chezmoi
