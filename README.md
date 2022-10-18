@@ -22,3 +22,9 @@
  ```
  chezmoi init --apply https://github.com/devWladimir/dotfiles.git
  ```
+
+ 3. Reboot system
+ 
+ ```
+ sudo shutdown -r now
+ ```
