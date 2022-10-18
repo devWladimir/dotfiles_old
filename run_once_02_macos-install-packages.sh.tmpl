@@ -1,0 +1,29 @@
+{{ if eq .chezmoi.os "darwin" -}}
+
+#!/bin/sh
+
+# Install Homebrew if not installed
+if test ! $(which brew); then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Packages
+apps=(
+    neovim
+)
+
+# Install Packages
+brew install "${apps[@]}"
+
+# Casks packages
+casks=(
+    firefox
+    google-chrome
+    iterm2
+    visual-studio-code
+)
+
+# Install cask packages
+brew install "${casks[@]}" --cask
+
+{{ end -}}
