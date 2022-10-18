@@ -28,4 +28,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# [Settings] Hide Special chars modal window on typing
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 {{ end -}}
