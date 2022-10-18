@@ -16,3 +16,9 @@
  ```
  bash -c "$(curl -fsSL https://raw.githubusercontent.com/devWladimir/dotfiles/main/installer/macos.sh)"
  ```
+
+ 2. Init dotfiles
+ 
+ ```
+ chezmoi init --apply https://github.com/devWladimir/dotfiles.git
+ ```
