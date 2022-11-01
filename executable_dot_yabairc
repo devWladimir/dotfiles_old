@@ -17,8 +17,8 @@ yabai -m config                                       \
     focus_follows_mouse          off                  \
     window_origin_display        default              \
     window_placement             second_child         \
-    window_topmost               off                  \
-    window_shadow                on                   \
+    window_topmost               on                   \
+    window_shadow                off                  \
     window_animation_duration    0.0                  \
     window_opacity_duration      0.0                  \
     active_window_opacity        0.4                  \
@@ -44,15 +44,28 @@ yabai -m config                                       \
     mouse_modifier               fn                   \
     mouse_action1                move                 \
     mouse_action2                resize               \
-    mouse_drop_action            swap                 \
-    rule --add app=Spotify --space 6                  \
-    rule --add app=Discord --space 6                  \
-    rule --add app="^System Preferences$" manage=off  \
-    rule --add app=Dashlane manage=off                \
-    rule --add app=Spotify manage=off                 \
-    rule --add app=Godot manage=off                   \
-    rule --add app=Discord manage=off                 \
-    rule --add app=Übersicht manage=off               \
-    rule --add app=BetterTouchTool manage=off
+    mouse_drop_action            swap                 
+
+# Running through float windows
+yabai -m space 1 --label web
+yabai -m space 2 --label code
+yabai -m space 3 --label terminal
+yabai -m space 4 --label SQL
+yabai -m space 5 --label chat
+yabai -m space 6 --label music
+
+# Rules for specific apps to launch and be managed by yabai
+yabai -m rule --add app=Spotify --space 6
+yabai -m rule --add app=Discord --space 6
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Системные настройки$" manage=off
+yabai -m rule --add app="System Preferences" manage=off
+yabai -m rule --add app="Системные настройки" manage=off
+yabai -m rule --add app=Dashlane manage=off
+yabai -m rule --add app=Spotify manage=off
+yabai -m rule --add app=Godot manage=off
+yabai -m rule --add app=Discord manage=off
+yabai -m rule --add app=Übersicht manage=off
+yabai -m rule --add app=BetterTouchTool manage=off
 
 echo "yabai configuration loaded.."
