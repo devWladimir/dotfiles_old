@@ -47,3 +47,10 @@
   - [ ] Add widget Discord for Sketchybar
   - [ ] Add widget Telegram for Sketchybar
   - [ ] Add install Docker
+  - [ ] Add install Krita
+  - [ ] Add install Mysql GUI client
+  - [ ] Add installi Tmux
+  - [ ] Add config Tmux
+  - [ ] Add instruction or script for disable Safe File System for Yabai full configuration
+  - [ ] Add install PHP Storm
+  - [ ] Update Chezmoiignore for correct working dotfiles
