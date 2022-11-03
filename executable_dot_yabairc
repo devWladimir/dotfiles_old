@@ -9,7 +9,12 @@
 #
 # yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 # sudo yabai --load-sa
+# echo "$(whoami) ALL=(root) NOPASSWD: $(which yabai) --load-sa" | sudo tee /etc/sudoers.d/yabai
 #
+
+# Load yabai switcher for keybings (space --move)
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # global settings
 yabai -m config                                       \
@@ -36,36 +41,22 @@ yabai -m config                                       \
     split_type                   auto                 \
     auto_balance                 off                  \
     top_padding                  42                   \
-    bottom_padding               12                   \
+    bottom_padding               42                   \
     left_padding                 12                   \
     right_padding                12                   \
-    window_gap                   06                   \
+    window_gap                   10                   \
     layout                       bsp                  \
     mouse_modifier               fn                   \
     mouse_action1                move                 \
     mouse_action2                resize               \
     mouse_drop_action            swap                 
 
-# Running through float windows
-yabai -m space 1 --label web
-yabai -m space 2 --label code
-yabai -m space 3 --label terminal
-yabai -m space 4 --label SQL
-yabai -m space 5 --label chat
-yabai -m space 6 --label music
-
 # Rules for specific apps to launch and be managed by yabai
-yabai -m rule --add app=Spotify --space 6
 yabai -m rule --add app=Discord --space 6
-yabai -m rule --add app="^System Preferences$" manage=off
-yabai -m rule --add app="^Системные настройки$" manage=off
-yabai -m rule --add app="System Preferences" manage=off
-yabai -m rule --add app="Системные настройки" manage=off
-yabai -m rule --add app=Dashlane manage=off
-yabai -m rule --add app=Spotify manage=off
-yabai -m rule --add app=Godot manage=off
 yabai -m rule --add app=Discord manage=off
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Finder$" --space 6
+yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app=Übersicht manage=off
-yabai -m rule --add app=BetterTouchTool manage=off
 
 echo "yabai configuration loaded.."

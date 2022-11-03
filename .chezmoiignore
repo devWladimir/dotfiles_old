@@ -2,3 +2,8 @@ LICENSE
 README.md
 .gitignore
 installer/
+
+# Ignore Files/Folders if is not a Mac OS
+{{- if ne .chezmoi.os "darwin" }}
+dot_scripts/macos_*
+{{- end }}

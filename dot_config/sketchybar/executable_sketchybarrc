@@ -1,0 +1,114 @@
+# Plugins
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+
+# Font/Icons
+ICON_SIZE="Hack Nerd Font:Bold:12.0"
+FONT_SIZE="Hack Nerd Font:Regular:12.0"
+
+######################################################################
+# Bar Configuration                                                  #
+# https://felixkratz.github.io/SketchyBar/config/bar                 #
+#                                                                    #
+# Color picker                                                       #
+# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker #
+######################################################################
+
+# Bar configuration
+sketchybar --bar            \
+           height=34        \
+           position=top     \
+           sticky=off       \
+           padding_left=2   \
+           padding_right=12 \
+           color=0xff282a36
+
+# Default items settings
+sketchybar  --default               \
+            icon.color=0xffffffff   \
+            icon.font="$ICON_SIZE"  \
+            icon.padding_left=16    \
+            icon.padding_right=6    \
+            label.color=0xffffffff  \
+            label.font="$FONT_SIZE" \
+            label.padding_left=0    \
+            label.padding_right=4
+
+# Spaces
+SPACE_ICONS=("web" "code" "terminal" "SQL" "other" "6" "7" "8" "9" "10")
+
+for i in "${!SPACE_ICONS[@]}"
+do
+  sid=$(($i+1))
+  sketchybar --add space space.$sid left                \
+             --set space.$sid associated_space=$sid     \
+             icon=${SPACE_ICONS[i]}                     \
+            # label.padding_left=16    \
+            # label.padding_right=6    \
+             background.padding_left=2                  \
+             background.padding_right=2                 \
+             background.color=0xff444759                \
+             background.corner_radius=2                 \
+             background.height=30                       \
+             background.drawing=of                      \
+             label.drawing=off \
+            #  script="$PLUGIN_DIR/spaces.sh"             \
+             click_script="yabai -m space --focus $sid"
+done
+
+# Time widget
+sketchybar -m --add item time right             \
+              --set time                        \
+              update_freq=10                    \
+              icon=                            \
+              icon.color=0xfff1f913             \
+              label.color=0xfff1f913            \
+              script="bash $PLUGIN_DIR/time.sh" 
+
+# Date widget
+sketchybar -m --add item date right             \
+              --set date                        \
+              update_freq=60                    \
+              icon=                            \
+              icon.color=0xff8fe9fc             \
+              label.color=0xff8fe9fc            \
+              script="bash $PLUGIN_DIR/date.sh" 
+
+# Keyboard layout widget
+sketchybar --add event input_change 'AppleSelectedInputSourcesChangedNotification' \
+           --add item keyboard right                                               \
+           --set keyboard script="$PLUGIN_DIR/keyboard.sh"                         \
+           icon=                                                                  \
+           icon.color=0xffd96ead                                                   \
+           label.color=0xffd96ead                                                  \
+           --subscribe keyboard input_change
+
+# Wifi widget
+sketchybar --add item wifi right             \
+           --set wifi                        \
+           update_freq=5                     \
+           icon.color=0xffec5456             \
+           label.color=0xffec5456            \
+           script="bash $PLUGIN_DIR/wifi.sh"
+
+# Volume level widget
+sketchybar --add item sound right              \
+           --set sound                         \
+           update_freq=1                       \
+           icon.color=0xffbc96f6               \
+           label.color=0xffbc96f6              \
+           script="bash $PLUGIN_DIR/volume.sh"
+
+# Battery widget
+sketchybar --add item battery right                           \
+           --set battery script="bash $PLUGIN_DIR/battery.sh" \
+           update_freq=1                                    \
+           --subscribe battery system_woke
+
+# Update Sketchybar
+sketchybar --update
+
+echo "Sketchybar configuration loaded..."
+
+            #   background.color=0xffe8e8e9       \
+            #   background.height=15              \
+            #   background.corner_radius=4        \
