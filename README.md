@@ -54,3 +54,4 @@
   - [ ] Add instruction or script for disable Safe File System for Yabai full configuration
   - [ ] Add install PHP Storm
   - [ ] Update Chezmoiignore for correct working dotfiles
+  - [ ] Add installing Fonts for correct working dotfiles
