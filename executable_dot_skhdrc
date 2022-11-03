@@ -252,3 +252,9 @@ shift + ctrl - 5 : yabai -m window --space  5; yabai -m space --focus 5
 shift + ctrl - 5 : yabai -m window --space  6; yabai -m space --focus 6
 shift + ctrl - 5 : yabai -m window --space  7; yabai -m space --focus 7
 shift + ctrl - 5 : yabai -m window --space  8; yabai -m space --focus 8
+
+# # Resize windows
+rctrl + alt - h : yabai -m window --resize left:-50:0; yabai -m window --resize right:-50:0
+rctrl + alt - j : yabai -m window --resize bottom:0:50; yabai -m window --resize top:0:50
+rctrl + alt - k : yabai -m window --resize top:0:-50; yabai -m window --resize bottom:0:-50
+rctrl + alt - l : yabai -m window --resize right:50:0; yabai -m window --resize left:50:0
