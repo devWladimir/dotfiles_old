@@ -55,3 +55,4 @@
   - [ ] Add install PHP Storm
   - [ ] Update Chezmoiignore for correct working dotfiles
   - [ ] Add installing Fonts for correct working dotfiles
+  - [ ] Fix Google Chrome > find modal window with Yabai 
