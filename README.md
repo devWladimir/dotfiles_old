@@ -28,3 +28,13 @@
  ```
  sudo shutdown -r now
  ```
+
+
+ # TODO
+
+ ## Mac OS
+  - [ ] Fix icons/colors for battery widget in Sketchybar
+  - [ ] Code refactoring for ~/.dotfiles
+  - [ ] Fix styles for Spaces widget in Sketchybar
+  - [ ] Add Title to Sketchybar
+  - [ ] Add music widget for Sketchybar
