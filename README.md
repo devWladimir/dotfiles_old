@@ -44,3 +44,6 @@
   - [ ] Add script for updating yabai
   - [ ] Find way to ignore Notification after runing comand `sudo yabai --load-sa`
   - [ ] Add config for Alacritty terminal
+  - [ ] Add widget Discord for Sketchybar
+  - [ ] Add widget Telegram for Sketchybar
+  - [ ] Add install Docker
