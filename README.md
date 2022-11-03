@@ -38,3 +38,9 @@
   - [ ] Fix styles for Spaces widget in Sketchybar
   - [ ] Add Title to Sketchybar
   - [ ] Add music widget for Sketchybar
+  - [ ] Create script for configuring `Defaults` plists in Mac OS
+  - [ ] Add installing Yabai, SKHD, Sketchybar with required font to installation process
+  - [ ] Add configs for VSCode
+  - [ ] Add script for updating yabai
+  - [ ] Find way to ignore Notification after runing comand `sudo yabai --load-sa`
+  - [ ] Add config for Alacritty terminal
