@@ -4,11 +4,11 @@ function mkdircd() {
 }
 
 # Refresh yabai with all services
-function yabai_refresh() {
-    dot apply && \
+function workspace_restart() {
     brew services restart yabai && \
     brew services restart skhd && \
-    skhd --reload
+    skhd --reload && \
+    brew services restart sketchybar
 }
 
 # Refresh title bar function in Ubersicht

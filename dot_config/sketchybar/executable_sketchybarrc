@@ -67,8 +67,7 @@ function right_widgets() {
 }
 
 # Load Configuration with Widgets
-left_widgets
-center_widgets
-right_widgets
-
-sketchybar --update
+left_widgets        && \
+center_widgets      && \
+right_widgets       && \
+sketchybar --update 
