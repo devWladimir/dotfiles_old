@@ -5,8 +5,8 @@ sketchybar	-m	--add	event	window_focus \
               	--add event title_change
 
 # Window Title
-sketchybar	-m	--add				item	title "${WIDGETS_POSITION}"																\
-              	--set 			title 																													\
+sketchybar	-m	--add			item	title "${WIDGETS_POSITION}"																  \
+              	--set 		title   																													\
 																																														\
 								icon.drawing=off 																														\
 								label.color=$COLOR_SPRING_WOOD 																							\
