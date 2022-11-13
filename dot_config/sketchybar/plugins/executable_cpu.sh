@@ -9,7 +9,7 @@ CPU_USER=$(echo "$CPU_INFO" | grep $(whoami) | sed "s/[^ 0-9\.]//g" | awk "{sum+
 CPU_PERCENT=$(echo "$CPU_SYS $CPU_USER" | awk '{ printf("%02.0f\n", ($1 + $2)*100) }')
 CPU_USAGE_COLOR=$CPU_COLOR
 
-if [[ $CPU_PERCENT > 89 ]] ; then
+if [[ $CPU_PERCENT > 95 ]] ; then
   CPU_USAGE_COLOR=$CPU_DANGER_COLOR
 fi
 
