@@ -64,10 +64,11 @@ function right_widgets() {
   source "$WIDGETS_DIR/wifi.sh"
   source "$WIDGETS_DIR/volume.sh"
   source "$WIDGETS_DIR/battery.sh"
+  source "$WIDGETS_DIR/memory.sh"
 }
 
 # Load Configuration with Widgets
 left_widgets        && \
 center_widgets      && \
 right_widgets       && \
-sketchybar --update 
+sketchybar --update s
