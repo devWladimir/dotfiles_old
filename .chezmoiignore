@@ -7,3 +7,5 @@ installer/
 {{- if ne .chezmoi.os "darwin" }}
 dot_scripts/macos_*
 {{- end }}
+
+dot_config/old_sketchybar/
