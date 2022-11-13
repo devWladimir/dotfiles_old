@@ -64,6 +64,7 @@ function right_widgets() {
   source "$WIDGETS_DIR/wifi.sh"
   source "$WIDGETS_DIR/volume.sh"
   source "$WIDGETS_DIR/battery.sh"
+  source "$WIDGETS_DIR/cpu.sh"
   source "$WIDGETS_DIR/memory.sh"
 }
 

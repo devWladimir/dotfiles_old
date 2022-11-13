@@ -28,3 +28,6 @@ ICON_BATTERY_CHARGE=􀢋
 
 # Memory
 ICON_MEMORY=􀫦
+
+# CPU
+ICON_CPU=􀫥
