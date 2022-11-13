@@ -31,9 +31,6 @@
   - [ ] Add script for updating yabai
   - [ ] Find way to ignore Notification after runing comand `sudo yabai --load-sa`
   - [ ] Add config for Alacritty terminal
-  - [ ] Add widget Discord for Sketchybar
-  - [ ] Add widget Telegram for Sketchybar
-  - [ ] Add install Docker
   - [ ] Add install Krita
   - [ ] Add install Mysql GUI client
   - [ ] Add installi Tmux
@@ -41,5 +38,3 @@
   - [ ] Add instruction or script for disable Safe File System for Yabai full configuration
   - [ ] Add install PHP Storm
   - [ ] Update Chezmoiignore for correct working dotfiles
-  - [ ] Add installing Fonts for correct working dotfiles
-  - [ ] Fix Google Chrome > find modal window with Yabai 
